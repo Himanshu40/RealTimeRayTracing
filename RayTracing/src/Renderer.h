@@ -1,7 +1,9 @@
 #pragma once
 
 #include "Walnut/Image.h"
+
 #include <memory>
+#include <glm/glm.hpp>
 
 class Renderer {
 public:
@@ -14,4 +16,6 @@ public:
 private:
 	std::shared_ptr<Walnut::Image> m_FinalImage;
 	uint32_t* m_ImageData = nullptr;
+
+	uint32_t PerPixel(glm::vec2 coord);
 };
